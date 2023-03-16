@@ -28,6 +28,8 @@ class Quiz:
         # initialize the quiz state
         self.score = 0
         self.correct_count = 0
+        for q in self.questions:
+            q.is_correct = False
 
         # print the header
         self.print_header()
@@ -104,5 +106,3 @@ class Answer:
     def __init__(self):
         self.text = ""
         self.name = ""
-
-
